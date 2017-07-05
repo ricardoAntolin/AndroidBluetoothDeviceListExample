@@ -34,7 +34,6 @@ dependencies {
 
     def unitTestDependencies = rootProject.ext.unitTesting
     def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
-    def dataDependencies = rootProject.ext.dataDependencies
     def commonDependencies = rootProject.ext.commonDependencies
     def presentationDependencies = rootProject.ext.presentationDependencies
     def compileTimeDependencies = rootProject.ext.compileTimeDependencies
@@ -44,9 +43,6 @@ dependencies {
         annotationProcessor dependency.value
     }
     for (dependency in commonDependencies) {
-        compile dependency.value
-    }
-    for (dependency in dataDependencies) {
         compile dependency.value
     }
     for (dependency in presentationDependencies) {

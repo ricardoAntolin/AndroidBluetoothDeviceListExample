@@ -10,30 +10,23 @@ ext {
 
     //Android
     androidBuildToolsVersion = "26.0.0"
-    androidMinSdkVersion = 19
-    androidTargetSdkVersion = 26
-    androidCompileSDKVersion = 26
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 25
+    androidCompileSDKVersion = 25
     supportLibraryVersion = '25.2.0'
     androidVersionCode = 1
     androidVersionName = "1.0.0"
 
     //Android Support
-    supportLibraryVersion = '26.0.0-alpha1'
+    supportLibraryVersion = '25.2.0'
 
     //Kotlin
-    rxKotlinVersion = '2.0.3'
     ankoPluginVersion = '0.9.1'
 
     //Third party libraries
     daggerVersion = '2.11-rc2'
-    rxJavaVersion = '2.0.9'
-    rxAndroidVersion = '2.0.1'
     javaxAnnotationVersion = '10.0-b28'
     javaxInjectVersion = '1'
-    gsonVersion = '2.7'
-    retrofitVersion = '2.2.0'
-    dexterVersion = '4.1.0'
-    okHttpVersion = '3.6.0'
     constraintLayoutVersion = '1.0.2'
     firebaseAuthVersion = '10.2.6'
     googlePlayServicesVersion = '10.2.6'
@@ -55,20 +48,11 @@ ext {
 
     commonDependencies = [kotlinStdLib            : "org.jetbrains.kotlin:kotlin-stdlib-jre7:${kotlinVersion}",
                           dagger                  : "com.google.dagger:dagger-android:${daggerVersion}",
-                          rxJava                  : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
-                          rxAndroid               : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
-                          rxKotlin                : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
                           supportAnnotations      : "com.android.support:support-annotations:${supportLibraryVersion}"]
 
     annotationProcessorDependencies = [
                           daggerAnotation         : "com.google.dagger:dagger-android-processor:${daggerVersion}",
                           daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",]
-
-    dataDependencies = [retrofit2               : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
-                        retrofit2Converter      : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
-                        retrofit2RxAdapter      : "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
-                        gson                    : "com.google.code.gson:gson:${gsonVersion}",
-                        okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"]
 
     presentationDependencies = [supportRecyclerView : "com.android.support:recyclerview-v7:${supportLibraryVersion}",
                                 supportCardView     : "com.android.support:cardview-v7:${supportLibraryVersion}",
@@ -79,7 +63,8 @@ ext {
                                 anko_v4_support     : "org.jetbrains.anko:anko-support-v4:${ankoPluginVersion}",
                                 anko_v7_support     : "org.jetbrains.anko:anko-appcompat-v7:${ankoPluginVersion}",
                                 constraintLayout    : "com.android.support.constraint:constraint-layout:${constraintLayoutVersion}",
-                                firebaseAuth        : "com.google.firebase:firebase-auth:${firebaseAuthVersion}"]
+                                firebaseAuth        : "com.google.firebase:firebase-auth:${firebaseAuthVersion}",
+    ]
 
 
     unitTesting = [

@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">Android Test</string>
-    <string name="action_settings">Settings</string>
+
+    <!--LOGIN SCREEN-->
+
+    <string name="username_placeholder">Email</string>
+    <string name="password_placeholder">Password</string>
+
+    <string name="send_login_button">SignIn</string>
+    <string name="create_account_button">SignUp</string>
+
+    <string name="password_input_not_blank_error">Password can not be blank</string>
+    <string name="passwords_inputs_not_match_error">Passwords not match</string>
+    <string name="username_input_not_blank_error">Email can not be blank</string>
+    <string name="username_input_not_email_error">Email is not valid</string>
+    <string name="username_password_not_match">Does not exist any user with this email and password</string>
+    <string name="server_communication_error">There was an error on server communication</string>
+    <string name="user_exist">Email is already registered</string>
+
+    <!--MAIN SCREEN-->
+
+    <string name="sign_out">SignOut</string>
+
+
 </resources>

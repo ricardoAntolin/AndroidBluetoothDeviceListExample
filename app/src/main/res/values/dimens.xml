@@ -1,3 +1,13 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--LOGIN DIMENS-->
+    <dimen name="login_input_container_margin">16dp</dimen>
+    <dimen name="login_input_container_margin_top">66dp</dimen>
+    <dimen name="login_input_margin">16dp</dimen>
+    <dimen name="login_button_margin">16dp</dimen>
+    <dimen name="login_logo_icon_size">120dp</dimen>
+    <dimen name="login_logo_icon_top_margin">70dp</dimen>
+
+
 </resources>
