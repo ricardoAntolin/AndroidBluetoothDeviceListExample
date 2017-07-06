@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Android Test</string>
+
+    <!--LOGIN SCREEN-->
+
+    <string name="username_placeholder">Email</string>
+    <string name="password_placeholder">Password</string>
+
+    <string name="send_login_button">SignIn</string>
+    <string name="create_account_button">SignUp</string>
+
+    <string name="password_input_not_blank_error">Password can not be blank</string>
+    <string name="password_input_too_short_error">Password must be at least 6 characters</string>
+    <string name="passwords_inputs_not_match_error">Passwords not match</string>
+    <string name="username_input_not_blank_error">Email can not be blank</string>
+    <string name="username_input_not_email_error">Email is not valid</string>
+    <string name="username_password_not_match">Does not exist any user with this email and password</string>
+    <string name="server_communication_error">There was an error on server communication</string>
+    <string name="user_exist">Email is already registered</string>
+
+    <!--MAIN SCREEN-->
+
+    <string name="sign_out">SignOut</string>
+    <string name="not_compatible_error">Not compatible</string>
+    <string name="not_support_bluetooth_error_message">Your phone does not support Bluetooth</string>
+
+
+</resources>

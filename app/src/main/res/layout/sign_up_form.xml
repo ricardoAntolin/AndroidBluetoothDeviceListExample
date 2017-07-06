@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/login_input_container_margin"
+    android:layout_marginLeft="@dimen/login_input_container_margin"
+    android:layout_marginRight="@dimen/login_input_container_margin"
+    android:layout_marginTop="@dimen/login_input_container_margin_top"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_input_margin"
+        android:layout_marginRight="@dimen/login_input_margin"
+        android:layout_marginTop="@dimen/login_input_margin"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/username_placeholder"
+        android:inputType="textEmailAddress"
+        android:lines="1" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_input_margin"
+        android:layout_marginRight="@dimen/login_input_margin"
+        android:layout_marginTop="@dimen/login_input_margin"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/password_placeholder"
+        android:imeOptions="actionSend"
+        android:inputType="textPassword"
+        android:lines="1" />
+
+    <EditText
+        android:id="@+id/edtConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/login_input_margin"
+        android:layout_marginRight="@dimen/login_input_margin"
+        android:layout_marginTop="@dimen/login_input_margin"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="@string/password_placeholder"
+        android:imeOptions="actionSend"
+        android:inputType="textPassword"
+        android:lines="1" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/login_button_margin"
+        android:layout_marginStart="@dimen/login_button_margin"
+        android:layout_marginTop="@dimen/login_button_margin"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="8dp"
+        android:text="@string/create_account_button"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtErrors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="@android:color/holo_red_dark" />
+
+</LinearLayout>
+

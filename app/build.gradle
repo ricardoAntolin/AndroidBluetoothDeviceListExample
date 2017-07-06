@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def globalConfiguration = rootProject.ext
+
+
+    compileSdkVersion rootProject.ext.androidCompileSDKVersion
+    buildToolsVersion rootProject.ext.androidBuildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.androidApplicationId
+        minSdkVersion rootProject.ext.androidMinSdkVersion
+        targetSdkVersion rootProject.ext.androidTargetSdkVersion
+        versionCode rootProject.ext.androidVersionCode
+        versionName rootProject.ext.androidVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    def unitTestDependencies = rootProject.ext.unitTesting
+    def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+    def commonDependencies = rootProject.ext.commonDependencies
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def compileTimeDependencies = rootProject.ext.compileTimeDependencies
+    def annotationProcessorDependencies = rootProject.ext.annotationProcessorDependencies
+
+    for (dependency in annotationProcessorDependencies) {
+        annotationProcessor dependency.value
+    }
+    for (dependency in commonDependencies) {
+        compile dependency.value
+    }
+    for (dependency in presentationDependencies) {
+        compile dependency.value
+    }
+    for (dependency in unitTestDependencies) {
+        testCompile dependency.value
+    }
+    for (dependency in acceptanceTestDependencies) {
+        androidTestCompile dependency.value
+    }
+    for (dependency in compileTimeDependencies) {
+        provided dependency.value
+    }
+    for (dependency in annotationProcessorDependencies) {
+        kapt dependency.value
+    }
+
+
+}
+apply plugin: 'com.google.gms.google-services'

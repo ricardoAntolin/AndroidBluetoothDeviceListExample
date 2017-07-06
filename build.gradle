@@ -1,0 +1,34 @@
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-android-extensions'
+apply from: 'buildsystem/dependencies.gradle'
+
+buildscript {
+
+    ext.kotlinVersion = '1.1.3'
+    ext.gradleVersion = '2.3.3'
+    ext.googleServicesVersion = '3.0.0'
+
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlinVersion"
+        classpath "com.google.gms:google-services:$googleServicesVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+
+    task runUnitTests(dependsOn: [':data:testDebugUnitTest',':domain:testDebugUnitTest',':app:testDebugUnitTest', ':app:generateDebugSources']) {
+        description 'Run all unit tests'
+    }
+
+    task runAcceptanceTests(dependsOn: [':app:connectedAndroidTest']) {
+        description 'Run all acceptance tests.'
+    }
+}
