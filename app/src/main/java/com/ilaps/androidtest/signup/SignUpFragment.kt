@@ -9,8 +9,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.ilaps.androidtest.R
 import com.ilaps.androidtest.common.BaseFragment
 import com.ilaps.androidtest.navigation.Navigation
-import com.ilaps.androidtest.validators.validateIsBlank
-import com.ilaps.androidtest.validators.validateIsEmail
+import com.ilaps.androidtest.utils.validateIsBlank
+import com.ilaps.androidtest.utils.validateIsEmail
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.sign_up_form.*
 import org.jetbrains.anko.onClick
@@ -41,7 +41,6 @@ class SignUpFragment: BaseFragment(), SignUpContract.View {
         presenter.onStart(this)
     }
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val view = inflater.inflate(R.layout.fragment_sign_up, container, false)
         AndroidInjection.inject(this)
@@ -71,6 +70,11 @@ class SignUpFragment: BaseFragment(), SignUpContract.View {
 
         if (edtPassword.validateIsBlank()) {
             txtErrors.text = getText(R.string.password_input_not_blank_error)
+            return false
+        }
+
+        if (edtPassword.text.toString().length < 6) {
+            txtErrors.text = getString(R.string.password_input_too_short_error)
             return false
         }
 

@@ -8,8 +8,8 @@ import com.google.firebase.auth.FirebaseUser
 import com.ilaps.androidtest.R
 import com.ilaps.androidtest.common.BaseFragment
 import com.ilaps.androidtest.navigation.Navigation
-import com.ilaps.androidtest.validators.validateIsBlank
-import com.ilaps.androidtest.validators.validateIsEmail
+import com.ilaps.androidtest.utils.validateIsBlank
+import com.ilaps.androidtest.utils.validateIsEmail
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.sign_in_form.*
 import org.jetbrains.anko.onClick

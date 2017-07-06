@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/login_button_margin"
-        android:layout_weight="0.9"
+        android:layout_weight="0.5"
         android:backgroundTint="@color/colorPrimary"
         android:elevation="8dp"
         android:text="@string/sign_out"

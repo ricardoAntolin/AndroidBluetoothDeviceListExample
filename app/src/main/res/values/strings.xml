@@ -10,6 +10,7 @@
     <string name="create_account_button">SignUp</string>
 
     <string name="password_input_not_blank_error">Password can not be blank</string>
+    <string name="password_input_too_short_error">Password must be at least 6 characters</string>
     <string name="passwords_inputs_not_match_error">Passwords not match</string>
     <string name="username_input_not_blank_error">Email can not be blank</string>
     <string name="username_input_not_email_error">Email is not valid</string>
@@ -20,6 +21,8 @@
     <!--MAIN SCREEN-->
 
     <string name="sign_out">SignOut</string>
+    <string name="not_compatible_error">Not compatible</string>
+    <string name="not_support_bluetooth_error_message">Your phone does not support Bluetooth</string>
 
 
 </resources>

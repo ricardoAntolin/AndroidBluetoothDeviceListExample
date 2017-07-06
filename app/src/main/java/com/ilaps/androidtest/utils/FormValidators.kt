@@ -1,4 +1,4 @@
-package com.ilaps.androidtest.validators
+package com.ilaps.androidtest.utils
 
 import android.widget.EditText
 import java.util.regex.Pattern
